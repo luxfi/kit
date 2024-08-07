@@ -42,6 +42,7 @@ export function Header() {
           className="md:w-[132px] md:h-[33px]"
           alt="Rabbykit logo"
         />
+        <h1 className="text-white font-bold">modify to luxkit</h1>
         <Providers>
           <ConnectButton />
         </Providers>
