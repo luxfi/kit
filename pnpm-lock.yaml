@@ -16,8 +16,8 @@ importers:
         specifier: ^2.26.2
         version: 2.27.7
       '@rabby-wallet/rabbykit':
-        specifier: workspace:*
-        version: link:packages/rabbykit
+        specifier: 0.0.5
+        version: 0.0.5(@types/react@18.3.3)(@wagmi/core@1.4.13(@types/react@18.3.3)(react@18.3.1)(typescript@5.5.4)(viem@2.19.1(typescript@5.5.4)(zod@3.23.8))(zod@3.23.8))(typescript@5.5.4)(viem@2.19.1(typescript@5.5.4)(zod@3.23.8))(wagmi@1.4.13(@types/react@18.3.3)(react@18.3.1)(typescript@5.5.4)(viem@2.19.1(typescript@5.5.4)(zod@3.23.8))(zod@3.23.8))(zod@3.23.8)
       '@rollup/plugin-commonjs':
         specifier: ^25.0.4
         version: 25.0.8(rollup@3.29.4)
@@ -1414,6 +1414,19 @@ packages:
 
   '@popperjs/core@2.11.8':
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
+
+  '@rabby-wallet/rabbykit@0.0.5':
+    resolution: {integrity: sha512-+/K/LKfjAOJ4loEFa2tqehHYNarfVow0ET78g3gMOjQlm+SYPLPfIgIZWS0Ls+6bQHQPUwcQ96NE2hogri/XVw==}
+    peerDependencies:
+      '@wagmi/core': '>=1'
+      react-dom: '*'
+      viem: '>=1'
+      wagmi: '>=1'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      wagmi:
+        optional: true
 
   '@react-hook/intersection-observer@3.1.2':
     resolution: {integrity: sha512-mWU3BMkmmzyYMSuhO9wu3eJVP21N8TcgYm9bZnTrMwuM818bEk+0NRM3hP+c/TqA9Ln5C7qE53p1H0QMtzYdvQ==}
@@ -7256,6 +7269,28 @@ snapshots:
 
   '@popperjs/core@2.11.8': {}
 
+  '@rabby-wallet/rabbykit@0.0.5(@types/react@18.3.3)(@wagmi/core@1.4.13(@types/react@18.3.3)(react@18.3.1)(typescript@5.5.4)(viem@2.19.1(typescript@5.5.4)(zod@3.23.8))(zod@3.23.8))(typescript@5.5.4)(viem@2.19.1(typescript@5.5.4)(zod@3.23.8))(wagmi@1.4.13(@types/react@18.3.3)(react@18.3.1)(typescript@5.5.4)(viem@2.19.1(typescript@5.5.4)(zod@3.23.8))(zod@3.23.8))(zod@3.23.8)':
+    dependencies:
+      '@wagmi/core': 1.4.13(@types/react@18.3.3)(react@18.3.1)(typescript@5.5.4)(viem@2.19.1(typescript@5.5.4)(zod@3.23.8))(zod@3.23.8)
+      clsx: 2.1.1
+      dequal: 2.0.3
+      mipd: 0.0.5(typescript@5.5.4)(zod@3.23.8)
+      qrcode: 1.5.4
+      react: 18.3.1
+      svelte: 4.2.18
+      svelte-i18n: 4.0.0(svelte@4.2.18)
+      viem: 2.19.1(typescript@5.5.4)(zod@3.23.8)
+      zustand: 4.5.4(@types/react@18.3.3)(react@18.3.1)
+    optionalDependencies:
+      wagmi: 1.4.13(@types/react@18.3.3)(react@18.3.1)(typescript@5.5.4)(viem@2.19.1(typescript@5.5.4)(zod@3.23.8))(zod@3.23.8)
+    transitivePeerDependencies:
+      - '@types/react'
+      - bufferutil
+      - immer
+      - typescript
+      - utf-8-validate
+      - zod
+
   '@react-hook/intersection-observer@3.1.2(react@18.3.1)':
     dependencies:
       '@react-hook/passive-layout-effect': 1.2.1(react@18.3.1)
@@ -7816,12 +7851,82 @@ snapshots:
       - utf-8-validate
       - zod
 
+  '@wagmi/connectors@3.1.11(@types/react@18.3.3)(react@18.3.1)(typescript@5.5.4)(viem@2.19.1(typescript@5.5.4)(zod@3.23.8))(zod@3.23.8)':
+    dependencies:
+      '@coinbase/wallet-sdk': 3.9.3
+      '@safe-global/safe-apps-provider': 0.18.3(typescript@5.5.4)(zod@3.23.8)
+      '@safe-global/safe-apps-sdk': 8.1.0(typescript@5.5.4)(zod@3.23.8)
+      '@walletconnect/ethereum-provider': 2.11.0(@types/react@18.3.3)(react@18.3.1)
+      '@walletconnect/legacy-provider': 2.0.0
+      '@walletconnect/modal': 2.6.2(@types/react@18.3.3)(react@18.3.1)
+      '@walletconnect/utils': 2.11.0
+      abitype: 0.8.7(typescript@5.5.4)(zod@3.23.8)
+      eventemitter3: 4.0.7
+      viem: 2.19.1(typescript@5.5.4)(zod@3.23.8)
+    optionalDependencies:
+      typescript: 5.5.4
+    transitivePeerDependencies:
+      - '@azure/app-configuration'
+      - '@azure/cosmos'
+      - '@azure/data-tables'
+      - '@azure/identity'
+      - '@azure/keyvault-secrets'
+      - '@azure/storage-blob'
+      - '@capacitor/preferences'
+      - '@netlify/blobs'
+      - '@planetscale/database'
+      - '@react-native-async-storage/async-storage'
+      - '@types/react'
+      - '@upstash/redis'
+      - '@vercel/kv'
+      - bufferutil
+      - encoding
+      - ioredis
+      - react
+      - supports-color
+      - uWebSockets.js
+      - utf-8-validate
+      - zod
+
   '@wagmi/core@1.4.13(@types/react@18.3.3)(react@18.3.1)(typescript@5.5.4)(viem@1.21.4(typescript@5.5.4)(zod@3.23.8))(zod@3.23.8)':
     dependencies:
       '@wagmi/connectors': 3.1.11(@types/react@18.3.3)(react@18.3.1)(typescript@5.5.4)(viem@1.21.4(typescript@5.5.4)(zod@3.23.8))(zod@3.23.8)
       abitype: 0.8.7(typescript@5.5.4)(zod@3.23.8)
       eventemitter3: 4.0.7
       viem: 1.21.4(typescript@5.5.4)(zod@3.23.8)
+      zustand: 4.5.4(@types/react@18.3.3)(react@18.3.1)
+    optionalDependencies:
+      typescript: 5.5.4
+    transitivePeerDependencies:
+      - '@azure/app-configuration'
+      - '@azure/cosmos'
+      - '@azure/data-tables'
+      - '@azure/identity'
+      - '@azure/keyvault-secrets'
+      - '@azure/storage-blob'
+      - '@capacitor/preferences'
+      - '@netlify/blobs'
+      - '@planetscale/database'
+      - '@react-native-async-storage/async-storage'
+      - '@types/react'
+      - '@upstash/redis'
+      - '@vercel/kv'
+      - bufferutil
+      - encoding
+      - immer
+      - ioredis
+      - react
+      - supports-color
+      - uWebSockets.js
+      - utf-8-validate
+      - zod
+
+  '@wagmi/core@1.4.13(@types/react@18.3.3)(react@18.3.1)(typescript@5.5.4)(viem@2.19.1(typescript@5.5.4)(zod@3.23.8))(zod@3.23.8)':
+    dependencies:
+      '@wagmi/connectors': 3.1.11(@types/react@18.3.3)(react@18.3.1)(typescript@5.5.4)(viem@2.19.1(typescript@5.5.4)(zod@3.23.8))(zod@3.23.8)
+      abitype: 0.8.7(typescript@5.5.4)(zod@3.23.8)
+      eventemitter3: 4.0.7
+      viem: 2.19.1(typescript@5.5.4)(zod@3.23.8)
       zustand: 4.5.4(@types/react@18.3.3)(react@18.3.1)
     optionalDependencies:
       typescript: 5.5.4
@@ -9432,7 +9537,7 @@ snapshots:
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 2.7.1(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@2.7.1)(eslint@8.57.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@2.7.1(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
       eslint-plugin-jsx-a11y: 6.9.0(eslint@8.57.0)
       eslint-plugin-react: 7.35.0(eslint@8.57.0)
       eslint-plugin-react-hooks: 4.6.2(eslint@8.57.0)
@@ -9454,7 +9559,7 @@ snapshots:
     dependencies:
       debug: 4.3.6
       eslint: 8.57.0
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@2.7.1)(eslint@8.57.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@2.7.1(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
       glob: 7.2.3
       is-glob: 4.0.3
       resolve: 1.22.8
@@ -9473,7 +9578,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@2.7.1)(eslint@8.57.0):
+  eslint-plugin-import@2.29.1(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@2.7.1(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0):
     dependencies:
       array-includes: 3.1.8
       array.prototype.findlastindex: 1.2.5
@@ -13008,6 +13113,44 @@ snapshots:
       - uWebSockets.js
       - utf-8-validate
       - zod
+
+  wagmi@1.4.13(@types/react@18.3.3)(react@18.3.1)(typescript@5.5.4)(viem@2.19.1(typescript@5.5.4)(zod@3.23.8))(zod@3.23.8):
+    dependencies:
+      '@tanstack/query-sync-storage-persister': 4.36.1
+      '@tanstack/react-query': 4.36.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@tanstack/react-query-persist-client': 4.36.1(@tanstack/react-query@4.36.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+      '@wagmi/core': 1.4.13(@types/react@18.3.3)(react@18.3.1)(typescript@5.5.4)(viem@2.19.1(typescript@5.5.4)(zod@3.23.8))(zod@3.23.8)
+      abitype: 0.8.7(typescript@5.5.4)(zod@3.23.8)
+      react: 18.3.1
+      use-sync-external-store: 1.2.2(react@18.3.1)
+      viem: 2.19.1(typescript@5.5.4)(zod@3.23.8)
+    optionalDependencies:
+      typescript: 5.5.4
+    transitivePeerDependencies:
+      - '@azure/app-configuration'
+      - '@azure/cosmos'
+      - '@azure/data-tables'
+      - '@azure/identity'
+      - '@azure/keyvault-secrets'
+      - '@azure/storage-blob'
+      - '@capacitor/preferences'
+      - '@netlify/blobs'
+      - '@planetscale/database'
+      - '@react-native-async-storage/async-storage'
+      - '@types/react'
+      - '@upstash/redis'
+      - '@vercel/kv'
+      - bufferutil
+      - encoding
+      - immer
+      - ioredis
+      - react-dom
+      - react-native
+      - supports-color
+      - uWebSockets.js
+      - utf-8-validate
+      - zod
+    optional: true
 
   web-namespaces@2.0.1: {}
 
