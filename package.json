@@ -14,7 +14,6 @@
     "dev:doc": "pnpm --filter=\"./site/doc\" dev",
     "dev:examples": "pnpm --filter=\"./examples/next-wagmi\" dev",
     "dev:vite": "pnpm --filter=\"./examples/vite-vanilla-ts\" dev",
-    "build": "pnpm build:doc",
     "build:doc": "pnpm run build:kit && pnpm --filter=\"./site/doc\" build",
     "build:examples": "pnpm run build:kit && pnpm --filter=\"./examples/next-wagmi\" build",
     "dev:kit": "pnpm --filter=rabbykit dev",
@@ -26,6 +25,7 @@
   "license": "ISC",
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
+    "@rabby-wallet/rabbykit": "workspace:*",
     "@rollup/plugin-commonjs": "^25.0.4",
     "@rollup/plugin-dynamic-import-vars": "^2.0.5",
     "@rollup/plugin-json": "^6.0.0",
