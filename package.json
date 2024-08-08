@@ -39,6 +39,7 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
-    "cspell": "^7.3.9"
+    "cspell": "^7.3.9",
+    "pino-pretty": "^11.2.2"
   }
 }
