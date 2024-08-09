@@ -13,7 +13,7 @@ export const ConnectScenario = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const sliderRef = useRef<(targetIndex: number) => void>();
   return (
-    <section className="w-full pt-[100px] ">
+    <section className="w-full pt-[100px] bg-[#050505]">
       <div
         className={clsx(
           "max-w-[986px] w-full mx-auto flex flex-col items-center",
