@@ -5,7 +5,7 @@
 </script>
 
 <div class={`tip ${className}`}>
-  <a href="https://rabbykit.rabby.io" target="_blank" rel="noreferrer"
+  <a href="https://luxkit.vercel.app" target="_blank" rel="noreferrer"
     >{$t("Powered by LuxKit")}</a
   >
 </div>

@@ -16,7 +16,7 @@ export const getWalletConnectLegacyConnector = (params: {
       options: {
         //@ts-ignore
         projectId: params.projectId,
-        bridge: "https://derelay.rabby.io",
+        bridge: "https://derelay.lux.io",
         qrcode: false,
         ...params.options,
       },
