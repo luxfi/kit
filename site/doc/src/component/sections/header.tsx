@@ -11,11 +11,11 @@ const ClipText = () => {
       className=""
       style={React.useMemo(
         () => ({
-          background:
-            "linear-gradient(90deg, #BCFF88 5.02%, #69FFC9 28.1%, #7A9FFF 45.18%)",
-          backgroundClip: "text",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
+          // background:
+          //   "linear-gradient(90deg, #BCFF88 5.02%, #69FFC9 28.1%, #7A9FFF 45.18%)",
+          // backgroundClip: "text",
+          // WebkitBackgroundClip: "text",
+          // WebkitTextFillColor: "transparent",
         }),
         []
       )}
@@ -27,7 +27,7 @@ const ClipText = () => {
 
 export function Header() {
   return (
-    <section className="bg-title1  flex flex-col  items-center">
+    <section className="bg-black  flex flex-col  items-center" style={{backgroundImage: 'url(./header_bg.png)'}}>
       <div
         className={clsx(
           "w-full max-w-[960px] flex items-center justify-between",
@@ -42,7 +42,6 @@ export function Header() {
           className="md:w-[132px] md:h-[33px]"
           alt="Rabbykit logo"
         />
-        <h1 className="text-white font-bold">modify to luxkit</h1>
         <Providers>
           <ConnectButton />
         </Providers>
