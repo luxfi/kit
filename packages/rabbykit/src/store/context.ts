@@ -80,7 +80,7 @@ interface Store<
 
 export const useRKStore = createStore<Store<any, any>>()(
   subscribeWithSelector((set, get) => ({
-    appName: "RabbyKit",
+    appName: "LuxKit",
     isMobile: false,
     chains: [mainnet, goerli],
     theme: "light",

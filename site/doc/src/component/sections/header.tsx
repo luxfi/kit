@@ -40,7 +40,7 @@ export function Header() {
           width="110"
           height="28"
           className="md:w-[132px] md:h-[33px]"
-          alt="Rabbykit logo"
+          alt="Luxkit logo"
         />
         <Providers>
           <ConnectButton />

@@ -175,7 +175,7 @@ export const ConnectIntro = () => {
   return (
     <div
       className={clsx(
-        "w-full bg-white",
+        "w-full bg-[#050505]",
         "py-[40px] ",
         "lg:pt-[100px] lg:pb-[135px]"
       )}
