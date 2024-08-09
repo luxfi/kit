@@ -77,14 +77,15 @@ export const ConfigDemo = () => {
   return (
     <div
       className={clsx(
-        "w-full overflow-hidden",
+        "w-full overflow-hidden bg-[#050505]",
         "py-[60px]",
         "lg:pt-[100px] lg:pb-[110px]"
       )}
       style={{
-        backgroundImage: `url(${bg.src})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "100% 100%",
+        // backgroundImage: `url(${bg.src})`,
+      //   backgroundRepeat: "no-repeat",
+      //   backgroundSize: "100% 100%",
+
       }}
     >
       <div

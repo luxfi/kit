@@ -23,7 +23,7 @@ export const ConnectScenario = () => {
       >
         <div
           className={clsx(
-            "text-center text-title1  font-[510] mb-3",
+            "text-center text-white  font-[510] mb-3",
             "text-[20px]",
             "lg:text-[36px]"
           )}
@@ -32,7 +32,7 @@ export const ConnectScenario = () => {
         </div>
         <div
           className={clsx(
-            "text-center text-body ",
+            "text-center text-[#bdbdbd] ",
             "text-[15px] mb-[20px]",
             "lg:text-[32px] lg:mb-[44px]"
           )}
@@ -54,8 +54,8 @@ export const ConnectScenario = () => {
                 "rounded justify-center items-center flex text-center font-[510]",
                 "p-0  flex-1 h-[32px] text-[13px]",
                 "lg:w-auto lg:h-auto lg:flex-auto lg:pl-[29px] lg:pr-[30px] lg:pt-2.5 lg:pb-[9px] lg:text-[18px]",
-                index === currentSlide && "bg-white",
-                index !== currentSlide ? "text-body" : "text-blue-default"
+                index === currentSlide && "bg-black",
+                index !== currentSlide ? "text-body" : "text-[#fff]"
               )}
               onClick={() => {
                 sliderRef.current?.(index);
