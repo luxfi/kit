@@ -28,8 +28,8 @@ export function Providers({ children }: { children: React.ReactNode }) {
     if (!initRef.current) {
       initRef.current = true;
       const rabbyKit = createModal({
-        chains,
-        wagmi: config,
+        chains: chains as any,
+        wagmi: config as any,
         projectId: "58a22d2bc1c793fc31c117ad9ceba8d9",
         appName: "RabbyKit",
         appLogo: "/logo-blue.svg",

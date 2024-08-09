@@ -3,13 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "packageManager": "pnpm@8.7.6",
+  "private": true,
   "engines": {
     "node": ">=16.8.0",
     "pnpm": ">=8.7.0",
     "yarn": ">=999.0.0",
     "npm": ">=999.0.0"
   },
+  "workspaces": [
+    "examples/*",
+    "packages/*",
+    "site/*"
+  ],
+
   "scripts": {
     "dev:doc": "pnpm --filter=\"./site/doc\" dev",
     "dev:examples": "pnpm --filter=\"./examples/next-wagmi\" dev",
