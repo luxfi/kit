@@ -5,12 +5,12 @@ const defineMetadata = <T extends Metadata>(metadata: T) => metadata;
 const seoConfig = defineMetadata({
   metadataBase: new URL("https://rabbykit.rabby.io"),
   title: {
-    template: "%s - RabbyKit",
+    template: "%s - LuxKit",
     default:
-      "RabbyKit - A Real Web3 Way to connect all wallets for all Dapp developers",
+      "LuxKit - A Real Web3 Way to connect all wallets for all Dapp developers",
   },
   description:
-    "RabbyKit - A Real Web3 Way to connect all wallets for all Dapp developers",
+    "LuxKit - A Real Web3 Way to connect all wallets for all Dapp developers",
   openGraph: {
     images: "/logo-twitter.png",
     url: "https://rabbykit.rabby.io",

@@ -25,5 +25,5 @@ export const rabbyKit = createModal({
   chains,
   wagmi: config,
   projectId: "58a22d2bc1c793fc31c117ad9ceba8d9",
-  appName: "RabbyKit example",
+  appName: "LuxKit example",
 });

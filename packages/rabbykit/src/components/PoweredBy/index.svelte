@@ -6,7 +6,7 @@
 
 <div class={`tip ${className}`}>
   <a href="https://rabbykit.rabby.io" target="_blank" rel="noreferrer"
-    >{$t("Powered by RabbyKit")}</a
+    >{$t("Powered by LuxKit")}</a
   >
 </div>
 

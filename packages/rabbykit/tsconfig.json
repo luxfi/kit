@@ -1,7 +1,9 @@
 {
   "extends": "../../tsconfig.json",
+  // "extends": "@tsconfig/svelte/tsconfig.json",
   "compilerOptions": {
     "rootDir": "./",
+    "baseUrl": "./",
     "outDir": "./dist",
     "declaration": true,
     "declarationDir": "./dist",
