@@ -45,7 +45,7 @@ export const Footer = () => {
             </a>
           </div>
           <div className="text-[12px] whitespace-nowrap">
-            © 2023 luxwallet.xyz All rights reserved.
+            © 2024 Lux Partners Limited. All rights reserved.
           </div>
         </div>
       </div>

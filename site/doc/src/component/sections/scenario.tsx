@@ -111,7 +111,7 @@ export const ConnectScenario = () => {
           )}
         >
           <div className="text-[32px] font-[700] text-title2">
-            View the Docs and Get Rabby Kit for your Dapp
+            View the Docs and Get Lux Kit for your Dapp
           </div>
 
           <ViewDocButton />
@@ -129,7 +129,7 @@ export const ConnectScenario = () => {
           )}
         >
           <div className="mx-[10px] text-[16px] text-center font-[700] text-title2 ">
-            View the Docs and Get Rabby Kit <br />
+            View the Docs and Get Lux Kit <br />
             for your Dapp
           </div>
           <ViewDocButton sm />
