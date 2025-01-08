@@ -7,7 +7,7 @@ WORKDIR /app
 
 
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml tsconfig*.json ./
-COPY ./packages/rabbykit/package.json ./packages/rabbykit/package.json
+COPY ./packages/luxkit/package.json ./packages/luxkit/package.json
 COPY ./site/doc/package.json ./site/doc/package.json
 
 

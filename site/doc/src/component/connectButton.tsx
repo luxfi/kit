@@ -1,22 +1,22 @@
 "use client";
 
 import { useContext } from "react";
-import { RabbykitContext } from "./rabbykit";
+import { LuxKitContext } from "./luxkit";
 import { useAccount, useDisconnect } from "wagmi";
 import Image from "next/image";
 import clsx from "clsx";
 export const ConnectButton = () => {
-  const kit = useContext(RabbykitContext);
+  const kit = useContext(LuxKitContext);
   const { isConnected, address } = useAccount();
   const { disconnect } = useDisconnect();
 
   return (
     <button
       className={clsx(
-        "py-[13px]",
-        isConnected ? "px-[15px] bg-[#000000] border border-[#fff]  text-white" : "px-[18px] bg-[#fff]  text-black",
+        "py-[10px]",
+        isConnected ? "px-[12px] bg-blue-disable" : "px-[15px] bg-blue-default",
         "hover:shadow-button-hover",
-        "h-10 relative  rounded-[50px] flex gap-[6px] items-center justify-center text-center text-base font-[600]"
+        "h-10 relative  rounded-md flex gap-[6px] items-center justify-center text-center text-white text-base"
       )}
       onClick={() => {
         if (!isConnected) {

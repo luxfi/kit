@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 const defineMetadata = <T extends Metadata>(metadata: T) => metadata;
 
 const seoConfig = defineMetadata({
-  metadataBase: new URL("https://luxkit.vercel.app"),
+  metadataBase: new URL("https://luxkit.luxwallet.xyz"),
   title: {
     template: "%s - LuxKit",
     default:
@@ -13,7 +13,7 @@ const seoConfig = defineMetadata({
     "LuxKit - A Real Web3 Way to connect all wallets for all Dapp developers",
   openGraph: {
     images: "/logo-twitter.png",
-    url: "https://luxkit.vercel.app",
+    url: "https://luxkit.luxwallet.xyz",
   },
   icons: [
     { rel: "icon", url: "/favicon.png" },
@@ -22,8 +22,8 @@ const seoConfig = defineMetadata({
     { rel: "image/x-icon", url: "/favicon.png" },
   ],
   twitter: {
-    site: "@Rabby_io",
-    creator: "@Rabby_io",
+    site: "@luxdefi",
+    creator: "@luxdefi",
   },
 });
 

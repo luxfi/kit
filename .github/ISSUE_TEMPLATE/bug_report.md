@@ -18,7 +18,7 @@ body:
 - type: input
   attributes:
   label: Package Version
-  description: What version of @rabby-wallet/rabbykit are you using?
+  description: What version of luxkit are you using?
   placeholder: 1.0.0
   validations:
   required: true

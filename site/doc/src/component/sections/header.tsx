@@ -3,7 +3,7 @@ import * as React from "react";
 import { ConnectButton } from "../connectButton";
 import { ViewDocButton } from "../viewDocButton";
 import clsx from "clsx";
-import { Providers } from "../rabbykit";
+import { Providers } from "../luxkit";
 
 const ClipText = () => {
   return (
@@ -11,11 +11,11 @@ const ClipText = () => {
       className=""
       style={React.useMemo(
         () => ({
-          // background:
-          //   "linear-gradient(90deg, #BCFF88 5.02%, #69FFC9 28.1%, #7A9FFF 45.18%)",
-          // backgroundClip: "text",
-          // WebkitBackgroundClip: "text",
-          // WebkitTextFillColor: "transparent",
+          background:
+            "linear-gradient(90deg, #BCFF88 5.02%, #69FFC9 28.1%, #7A9FFF 45.18%)",
+          backgroundClip: "text",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
         }),
         []
       )}
@@ -27,7 +27,7 @@ const ClipText = () => {
 
 export function Header() {
   return (
-    <section className="bg-black  flex flex-col  items-center" style={{backgroundImage: 'url(./header_bg.png)'}}>
+    <section className="bg-title1  flex flex-col  items-center">
       <div
         className={clsx(
           "w-full max-w-[960px] flex items-center justify-between",
@@ -40,7 +40,7 @@ export function Header() {
           width="110"
           height="28"
           className="md:w-[132px] md:h-[33px]"
-          alt="Luxkit logo"
+          alt="LuxKit logo"
         />
         <Providers>
           <ConnectButton />

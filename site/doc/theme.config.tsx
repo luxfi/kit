@@ -30,7 +30,7 @@ const config: DocsThemeConfig = {
         />
         <meta
           name="og:title"
-          content={title ? title + " – Luxkit" : seoConfig.title.default}
+          content={title ? title + " – LuxKit" : seoConfig.title.default}
         />
         <meta
           name="og:description"

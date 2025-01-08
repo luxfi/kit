@@ -1,45 +1,45 @@
 {
-  "name": "rabbykit-mono",
+  "name": "luxkit-mono",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "private": true,
-  "workspaces": [
-    "examples/*",
-    "packages/*",
-    "site/*"
-  ],
+  "packageManager": "pnpm@9.10.0",
+  "engines": {
+    "node": ">=20.16.0",
+    "pnpm": ">=8.7.0",
+    "yarn": ">=999.0.0",
+    "npm": ">=999.0.0"
+  },
   "scripts": {
-    "dev:doc": "yarn workspace doc dev",
-    "dev:examples": "yarn workspace next-wagmi dev",
-    "dev:vite": "yarn workspace vite-vanilla-ts dev",
-    "build": "yarn build:doc",
-    "build:doc": "yarn workspace doc build",
-    "build:examples": "yarn build:kit && yarn workspace next-wagmi build",
-    "dev:kit": "yarn workspace @rabby-wallet/rabbykit dev",
-    "build:kit": "yarn workspace @rabby-wallet/rabbykit build",
+    "dev:doc": "pnpm --filter=\"./site/doc\" dev",
+    "dev:examples": "pnpm --filter=\"./examples/next-wagmi\" dev",
+    "build:doc": "pnpm run build:kit && pnpm --filter=\"./site/doc\" build",
+    "build:examples": "pnpm run build:kit && pnpm --filter=\"./examples/next-wagmi\" build",
+    "dev:kit": "pnpm --filter=luxkit dev",
+    "build:kit": "pnpm --filter=luxkit build",
     "spellcheck": "cspell lint . --no-must-find-files"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@changesets/cli": "^2.27.7",
-    "@rabby-wallet/rabbykit": "0.0.5",
-    "@rollup/plugin-commonjs": "^25.0.8",
-    "@rollup/plugin-dynamic-import-vars": "^2.1.2",
-    "@rollup/plugin-json": "^6.1.0",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@types/node": "^17.0.45",
-    "rollup": "^3.29.4",
-    "rollup-plugin-dts": "^6.1.1",
-    "rollup-plugin-swc3": "^0.10.4",
+    "@changesets/cli": "^2.26.2",
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-dynamic-import-vars": "^2.0.5",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "@types/node": "^17.0.31",
+    "@wagmi/connectors": "^4.1.14",
+    "@wagmi/core": "^2.13.4",
+    "rollup": "^3.29.2",
+    "rollup-plugin-dts": "^6.0.2",
+    "rollup-plugin-swc3": "^0.10.1",
     "rollup-swc-preserve-directives": "^0.5.0",
-    "typescript": "^5.5.4"
+    "typescript": "^5.2.2",
+    "viem": "^2.20.0",
+    "wagmi": "^2.12.7"
   },
   "dependencies": {
-    "cspell": "^7.3.9",
-    "picocolors": "^1.0.1",
-    "pino-pretty": "^11.2.2"
+    "cspell": "^7.3.8"
   }
 }

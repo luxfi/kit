@@ -5,7 +5,7 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @rabby-wallet/rabbykit@0.0.4
+  - luxkit@0.0.4
 
 ## 1.0.5
 
@@ -14,7 +14,7 @@
 - Updated dependencies [02ead99]
 - Updated dependencies [045f52e]
 - Updated dependencies [5ce5e47]
-  - @rabby-wallet/rabbykit@0.0.4
+  - luxkit@0.0.4
 
 ## 1.0.4
 
@@ -27,14 +27,14 @@
 ### Patch Changes
 
 - Updated dependencies [f90c88c]
-  - @rabby-wallet/rabbykit@0.0.3
+  - luxkit@0.0.3
 
 ## 1.0.2
 
 ### Patch Changes
 
 - Updated dependencies [c2f6848]
-  - @rabby-wallet/rabbykit@0.0.2
+  - luxkit@0.0.2
 
 ## 1.0.1
 

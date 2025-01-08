@@ -2,7 +2,7 @@
 import * as React from "react";
 
 import clsx from "clsx";
-import { Providers, RabbykitContext } from "./rabbykit";
+import { Providers, LuxKitContext } from "./luxkit";
 const KitProviderWrapper = (Com: () => React.JSX.Element) => () =>
   (
     <Providers>
@@ -11,7 +11,7 @@ const KitProviderWrapper = (Com: () => React.JSX.Element) => () =>
   );
 
 export const TestDarkMode = KitProviderWrapper(() => {
-  const kit = React.useContext(RabbykitContext);
+  const kit = React.useContext(LuxKitContext);
   return (
     <>
       <button

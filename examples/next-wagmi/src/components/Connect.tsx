@@ -3,26 +3,21 @@
 import { BaseError } from "viem";
 import { useAccount, useConfig, useConnect, useDisconnect } from "wagmi";
 import { useEffect, useRef } from "react";
-import { createModal } from "@rabby-wallet/rabbykit";
-import { supportChains } from "../wagmi";
+import { createModal } from "luxkit";
 
 export function Connect() {
   const { connector, isConnected } = useAccount();
-  const { connect, connectors, error, isLoading, pendingConnector } =
-    useConnect();
+  const { error } = useConnect();
   const { disconnect } = useDisconnect();
 
-  const rabbyKitRef = useRef<ReturnType<typeof createModal>>();
+  const luxKitRef = useRef<ReturnType<typeof createModal>>();
   const config = useConfig();
 
   useEffect(() => {
-    if (!rabbyKitRef.current) {
-      rabbyKitRef.current = createModal({
+    if (!luxKitRef.current) {
+      luxKitRef.current = createModal({
         showWalletConnect: true,
-        chains: supportChains,
-        wagmi: config,
-        appName: "test",
-        projectId: "58a22d2bc1c793fc31c117ad9ceba8d9",
+        wagmi: config as any,
         customButtons: [],
       });
     }
@@ -41,8 +36,8 @@ export function Connect() {
 
         <button
           onClick={() => {
-            rabbyKitRef.current?.setTheme("light");
-            rabbyKitRef.current?.open();
+            luxKitRef.current?.setTheme("light");
+            luxKitRef.current?.open();
           }}
         >
           light mode
@@ -52,8 +47,8 @@ export function Connect() {
 
         <button
           onClick={() => {
-            rabbyKitRef.current?.setTheme("dark");
-            rabbyKitRef.current?.open();
+            luxKitRef.current?.setTheme("dark");
+            luxKitRef.current?.open();
           }}
         >
           dark mode
@@ -61,13 +56,13 @@ export function Connect() {
         <br />
 
         {!isConnected && (
-          <button onClick={() => rabbyKitRef.current?.open()}>
+          <button onClick={() => luxKitRef.current?.open()}>
             open LuxKit
           </button>
         )}
         <br />
 
-        <button onClick={() => rabbyKitRef.current?.open({ forceOpen: true })}>
+        <button onClick={() => luxKitRef.current?.open({ forceOpen: true })}>
           force open LuxKit
         </button>
         {/* {connectors
