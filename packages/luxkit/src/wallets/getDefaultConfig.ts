@@ -22,6 +22,10 @@ import {
   imTokenWallet,
   otherInjectedWallet,
   coinbaseWallet,
+  bridgeWallet,
+  coronaWallet,
+  xChainWallet,
+  rabbyWallet,
 } from "./connectors";
 import { Chain, Transport } from "viem";
 
