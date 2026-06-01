@@ -7,6 +7,7 @@ import svelte from "rollup-plugin-svelte";
 import sveltePreprocess, { scss } from "svelte-preprocess";
 import replace from "@rollup/plugin-replace";
 import crypto from "crypto";
+import { readFileSync } from "fs";
 
 //@ts-ignore
 import svgo from "rollup-plugin-svgo";
@@ -21,6 +22,20 @@ const external = [
 ];
 
 const input = ["./src/index.ts", "./src/index.react.tsx"];
+
+// Simple SVG plugin to import SVG files as strings
+const svgPlugin = () => ({
+  name: 'svg-loader',
+  transform(code: string, id: string) {
+    if (id.endsWith('.svg')) {
+      const svg = readFileSync(id, 'utf-8');
+      return {
+        code: `export default ${JSON.stringify(svg)}`,
+        map: null
+      };
+    }
+  }
+});
 export default defineConfig([
   {
     input,
@@ -31,47 +46,7 @@ export default defineConfig([
       sourcemap: true,
     },
     plugins: [
-      svgo({
-        plugins: [
-          {
-            name: "preset-default",
-            params: {
-              overrides: {
-                removeViewBox: false,
-                cleanupIDs: {
-                  prefix: {
-                    toString() {
-                      return crypto.randomBytes(6).toString("hex").slice(0, 4);
-                    },
-                  },
-                },
-              },
-            },
-          },
-          {
-            name: "cleanupNumericValues",
-            params: {
-              overrides: {
-                floatPrecision: 6,
-              },
-            },
-          },
-          "removeDimensions",
-          {
-            name: "addAttributesToSVGElement",
-            params: {
-              attributes: [
-                {
-                  width: "100%",
-                },
-                {
-                  height: "100%",
-                },
-              ],
-            },
-          },
-        ],
-      }),
+      svgPlugin(),
       json(),
       replace({
         "process.env.NODE_ENV": JSON.stringify(production),

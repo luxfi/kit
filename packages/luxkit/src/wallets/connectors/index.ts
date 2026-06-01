@@ -18,6 +18,10 @@ import { xdefiWallet } from "./xdefiWallet/xdefiWallet";
 import { zerionWallet } from "./zerionWallet/zerionWallet";
 import { tahoWallet } from "./tahoWallet/tahoWallet";
 import { imTokenWallet } from "./imTokenWallet/imTokenWallet";
+import { bridgeWallet } from "./bridgeWallet/bridgeWallet";
+import { coronaWallet } from "./coronaWallet/coronaWallet";
+import { xChainWallet } from "./xChainWallet/xChainWallet";
+import { rabbyWallet } from "./rabbyWallet/rabbyWallet";
 // import { safeWallet } from "./safeWallet/safeWallet";
 
 export {
@@ -41,5 +45,9 @@ export {
   zerionWallet,
   tahoWallet,
   imTokenWallet,
+  bridgeWallet,
+  coronaWallet,
+  xChainWallet,
+  rabbyWallet,
   // safeWallet,
 };
