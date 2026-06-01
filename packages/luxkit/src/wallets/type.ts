@@ -43,6 +43,12 @@ export type WalletResult = {
     ios?: string;
     safari?: string;
   };
+  features?: {
+    ringtailSignatures?: boolean;
+    crossChainOperations?: boolean;
+    zkProofs?: boolean;
+    bridge?: boolean;
+  };
   connector: LuxKitConnector;
   mobileUA?: (ua: string) => boolean;
 };
