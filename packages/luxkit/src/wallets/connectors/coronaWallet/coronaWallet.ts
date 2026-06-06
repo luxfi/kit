@@ -3,18 +3,18 @@ import logo from "./logo.svg";
 import { injected } from "@wagmi/connectors";
 import { getWalletProvider } from "../../../helpers/wallet";
 
-export const ringtailWallet = (): WalletResult => {
-  const provider = getWalletProvider("isRingtail");
+export const coronaWallet = (): WalletResult => {
+  const provider = getWalletProvider("iscorona");
   const installed = !!provider;
 
   return {
-    id: "ringtail",
-    name: "Ringtail Wallet",
-    rdns: "io.lux.ringtail",
+    id: "corona",
+    name: "Corona Wallet",
+    rdns: "io.lux.corona",
     logo,
     downloadUrls: {
       chrome:
-        "https://chrome.google.com/webstore/detail/ringtail-wallet/placeholder",
+        "https://chrome.google.com/webstore/detail/corona-wallet/placeholder",
     },
     installed,
     connector: {
@@ -22,8 +22,8 @@ export const ringtailWallet = (): WalletResult => {
         ? () =>
             injected({
               target: () => ({
-                id: "ringtail",
-                name: "Ringtail Wallet",
+                id: "corona",
+                name: "Corona Wallet",
                 provider,
               }),
             })

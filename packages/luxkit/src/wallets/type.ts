@@ -44,7 +44,7 @@ export type WalletResult = {
     safari?: string;
   };
   features?: {
-    ringtailSignatures?: boolean;
+    coronaSignatures?: boolean;
     crossChainOperations?: boolean;
     zkProofs?: boolean;
     bridge?: boolean;

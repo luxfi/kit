@@ -23,7 +23,7 @@ import {
   otherInjectedWallet,
   coinbaseWallet,
   bridgeWallet,
-  ringtailWallet,
+  coronaWallet,
   xChainWallet,
   rabbyWallet,
 } from "./connectors";
