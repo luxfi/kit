@@ -4,7 +4,7 @@ import { injected } from "@wagmi/connectors";
 import { getWalletProvider } from "../../../helpers/wallet";
 
 export const coronaWallet = (): WalletResult => {
-  const provider = getWalletProvider("isCorona");
+  const provider = getWalletProvider("iscorona");
   const installed = !!provider;
 
   return {
