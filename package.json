@@ -17,6 +17,7 @@
     "build:examples": "pnpm run build:kit && pnpm --filter=\"./examples/next-wagmi\" build",
     "dev:kit": "pnpm --filter=luxkit dev",
     "build:kit": "pnpm --filter=luxkit build",
+    "typecheck": "node_modules/tsgo/bin/tsc --noEmit --incremental false -p packages/luxkit/tsconfig.json",
     "spellcheck": "cspell lint . --no-must-find-files"
   },
   "keywords": [],
@@ -35,6 +36,7 @@
     "rollup-plugin-dts": "catalog:",
     "rollup-plugin-swc3": "catalog:",
     "rollup-swc-preserve-directives": "catalog:",
+    "tsgo": "npm:typescript@7.0.2",
     "typescript": "catalog:",
     "viem": "catalog:",
     "wagmi": "catalog:"
